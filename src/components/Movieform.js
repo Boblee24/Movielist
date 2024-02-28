@@ -77,7 +77,15 @@ function Movieform({ addMovie }) {
               placeholder='Enter Rating on a scale of 1 to 100'
               data-testid='ratingsInput'
               value={ratings}
-              onChange={(e) => setRatings(e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value === '' || (value >= 1 && value <= 100)) {
+                  setRatings(value);
+                } else {
+                  // Display an error message or handle it as per your requirements
+                  console.error('Invalid input. Please enter a number between 1 and 100.');
+                }
+              }}
             />
           </div>
           <div className='layout-column mb-30'>
