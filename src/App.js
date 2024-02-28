@@ -4,6 +4,7 @@ import './App.css'
 import 'h8k-components'
 
 import { Movieform, Movieslist, Search } from './components'
+import Movieform1 from './components/Movieform1'
 
 const title = 'Favorite Movie Directory'
 
@@ -23,7 +24,8 @@ function App() {
       <h8k-navbar header={ title } />
       <div className='layout-row justify-content-center mt-100'>
         <div className='w-30 mr-75'>
-          <Movieform addMovie={addMovie}/>
+          {/* <Movieform addMovie={addMovie}/> */}
+          <Movieform1/>
         </div>
         <div className='layout-column w-30'>
           <Search movies={movies} onSearch={handleSearchResults}/>

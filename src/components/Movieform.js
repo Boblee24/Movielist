@@ -1,19 +1,25 @@
 import React from 'react';
 import { useState } from 'react';
+import { useForm } from "react-hook-form"
 
 function Movieform({ addMovie }) {
+
+  const {register, handleSubmit} = useForm()
   const [namee, setName] = useState('');
   const [ratings, setRatings] = useState('');
   const [duration, setDuration] = useState('');
   const [errorMessage, setErrorMessage] = useState(false);
-
+  
+  const onSubmit = () => {
+    console.log("Hello Bitches")
+  }
   const convertMinutesToHours = (minutes) => {
     const hours = minutes / 60;
   const formattedHours = hours.toFixed(1); // Display one decimal place
   return `${formattedHours} Hrs`;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit1 = (e) => {
     e.preventDefault();
 
     // Check for valid time format
@@ -53,7 +59,7 @@ function Movieform({ addMovie }) {
   return (
     <section>
       <div className='card pa-30'>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className='layout-column mb-15'>
             <label htmlFor='name' className='mb-3'>
               Movie Name
