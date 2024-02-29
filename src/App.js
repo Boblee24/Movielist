@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import 'h8k-components'
 
-import { Movieform, Movieslist, Search } from './components'
+import { Movieslist, Search } from './components'
 import Movieform1 from './components/Movieform1'
 
 const title = 'Favorite Movie Directory'
