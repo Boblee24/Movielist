@@ -12,8 +12,8 @@ function Movieslist(props) {
           style={{ borderBottom: '2px solid var(--primary-color)' }}
         >
           <div className='layout-column w-40'>
-            <h3 className='my-3'>{movie.name}</h3>
-            <p className='my-0'>Ratings: {movie.ratings}/100</p>
+            <h3 className='my-3'>{movie.moviename}</h3>
+            <p className='my-0'>Ratings: {movie.rating}/100</p>
           </div>
           <div className='layout-row my-auto mr-20'>
             <p className='justify-content-end'>{movie.duration}</p>

@@ -24,7 +24,7 @@ function App() {
       <div className='layout-row justify-content-center mt-100'>
         <div className='w-30 mr-75'>
           {/* <Movieform addMovie={addMovie}/> */}
-          <Movieform2/>
+          <Movieform2 addMovie = {addMovie}/>
         </div>
         <div className='layout-column w-30'>
           <Search movies={movies} onSearch={handleSearchResults}/>
