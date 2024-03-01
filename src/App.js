@@ -3,8 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import 'h8k-components'
 
-import { Movieslist, Search } from './components'
-import Movieform1 from './components/Movieform1'
+import { Movieform2, Movieslist, Search } from './components'
 
 const title = 'Favorite Movie Directory'
 
@@ -25,7 +24,7 @@ function App() {
       <div className='layout-row justify-content-center mt-100'>
         <div className='w-30 mr-75'>
           {/* <Movieform addMovie={addMovie}/> */}
-          <Movieform1/>
+          <Movieform2/>
         </div>
         <div className='layout-column w-30'>
           <Search movies={movies} onSearch={handleSearchResults}/>
