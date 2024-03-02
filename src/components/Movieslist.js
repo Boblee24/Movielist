@@ -1,7 +1,6 @@
 import React from 'react'
 
 function Movieslist(props) {
-  console.log('Movies:', props.movies);
   return (
     <section>
       <ul className='styled w-100 pl-0' data-testid='moviesList'>

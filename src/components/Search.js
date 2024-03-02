@@ -9,10 +9,11 @@ function Search({ movies, onSearch }) {
       onSearch([]);
       return;
     }
+    // onSearched()
 
     // Filter movies based on the search term
     const filteredMovies = movies.filter(movie =>
-      movie.name.toLowerCase().includes(searchTerm.toLowerCase())
+      movie.moviename.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     // Update search results in the parent component

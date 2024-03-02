@@ -45,12 +45,12 @@ const Movieform2 = ({ addMovie }) => {
       const minutes = parseInt(duration, 10);
       duration = convertMinutesToHours(minutes);
     } else if(duration.endsWith('h')){
-      duration = duration.toFixed(1) + 'Hrs'
+      duration = parseFloat(duration).toFixed(1) + 'Hrs'
     }
     addMovie({...data, duration});
 
     // console.log({ ...data, duration });
-    reset();
+    // reset();
   };
   return (
     <section>
