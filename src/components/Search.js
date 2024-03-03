@@ -17,7 +17,7 @@ function Search({ movies, onSearch }) {
     );
 
     // Update search results in the parent component
-    onSearch(filteredMovies);
+    onSearch(filteredMovies, filteredMovies === 0);
   };
 
   return (
