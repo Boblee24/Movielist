@@ -4,7 +4,8 @@ function Movieslist(props) {
   return (
     <section>
       <ul className='styled w-100 pl-0' data-testid='moviesList'>
-      {props.movies.map((movie, index) => (
+      {props.movies.length !== 0 ? (
+        props.movies.map((movie, index) => (
         <li
           key={index}
           className='flex slide-up-fade-in justify-content-between'
@@ -18,7 +19,8 @@ function Movieslist(props) {
             <p className='justify-content-end'>{movie.duration}</p>
           </div>
         </li>
-      ))}
+      ))
+      ) : "No result found"}
     </ul>
     </section>
   )
