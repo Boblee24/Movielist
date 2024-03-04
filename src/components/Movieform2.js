@@ -40,7 +40,6 @@ const Movieform2 = ({ addMovie }) => {
   const onSubmit = (data) => {
     let duration = data.duration;
     
-    // Convert minutes to hours if needed
     if (duration.endsWith('m')) {
       const minutes = parseInt(duration, 10);
       duration = convertMinutesToHours(minutes);
@@ -50,7 +49,7 @@ const Movieform2 = ({ addMovie }) => {
     addMovie({...data, duration});
 
     // console.log({ ...data, duration });
-    // reset();
+    reset();
   };
   return (
     <section>
